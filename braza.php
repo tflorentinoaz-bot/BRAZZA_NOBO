@@ -38,3 +38,5 @@ VALUES ('$nome', '$usuario', '$email', '$cfp_cnpj', '$telefone', '$endereco', '$
 mysqli_close($fogoebraza);
 
 
+
+
