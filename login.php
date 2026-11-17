@@ -38,12 +38,10 @@ if ($dados && password_verify($senha, $dados["senha"])) {
     session_regenerate_id(true);
     $_SESSION["usuario"] = $dados["usuario"];
 
-    // Volta para a página principal. O login permanece ativo.
-    header("Location: sobre.html");
+    // Após o login correto, abre a página inicial da loja.
+    header("Location: brazza.html");
     exit;
 }
-
-
 
 // Usuário ou senha incorretos.
 header("Location: login.html?erro=login");
