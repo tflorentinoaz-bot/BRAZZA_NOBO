@@ -44,6 +44,6 @@ if ($dados && password_verify($senha, $dados["senha"])) {
 }
 
 // Usuário ou senha incorretos.
-header("Location: login.html?erro=login");
+header("Location: brazza.html?erro=login");
 exit;
 ?>
