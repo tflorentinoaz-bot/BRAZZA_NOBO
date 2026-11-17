@@ -39,9 +39,11 @@ if ($dados && password_verify($senha, $dados["senha"])) {
     $_SESSION["usuario"] = $dados["usuario"];
 
     // Volta para a página principal. O login permanece ativo.
-    header("Location: brazza.html");
+    header("Location: sobre.html");
     exit;
 }
+
+
 
 // Usuário ou senha incorretos.
 header("Location: login.html?erro=login");
