@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma de recebimento - Sabor e Braza</title>
+    <link rel="stylesheet" href="CSS_BRAZZA/recebimento.css?v=1">
+</head>
+<body>
+
+    <header>
+        <h1>Sabor e Braza</h1>
+        <p>TUDO PARA VOCÊ!!!</p>
+    </header>
+
+    <nav>
+        <a href="brazza.html">INÍCIO</a>
+        <a href="entregas.html">ENTREGAS</a>
+        <a href="sobre.html">SOBRE NÓS</a>
+        <a href="part2.html">CADASTRA-SE</a>
+    </nav>
+
+    <main>
+        <section class="inicio">
+            <h2>Como deseja receber seu pedido?</h2>
+            <p>Escolha uma opção para visualizar as informações e confirmar seus dados.</p>
+        </section>
+
+        <section class="escolhas" aria-label="Forma de recebimento">
+            <input type="radio" name="recebimento" id="opcao-retirada" value="retirada">
+            <label for="opcao-retirada" class="escolha">RETIRAR NA LOJA</label>
+
+            <input type="radio" name="recebimento" id="opcao-entrega" value="entrega">
+            <label for="opcao-entrega" class="escolha">ENTREGA NA RESIDÊNCIA</label>
+        </section>
+
+        <section id="painel-retirada" class="painel">
+            <h2>Retirada na loja</h2>
+            <div class="cartao">
+                <h3>Local da loja mais próxima</h3>
+                <p>Atendemos em Minas Gerais, São Paulo e Rio de Janeiro.</p>
+                <div class="aviso-loja">
+                    <strong>Endereço da unidade:</strong>
+                    <p>O endereço da loja precisa ser cadastrado pela equipe da Sabor e Braza para mostrar a unidade correta.</p>
+                </div>
+
+                <h3>Horário de funcionamento</h3>
+                <ul>
+                    <li>Segunda a sexta-feira: 08h às 18h</li>
+                    <li>Sábado: 08h às 14h</li>
+                    <li>Domingo e feriados: fechado</li>
+                </ul>
+
+                <p class="observacao">Confirme a disponibilidade do produto e o endereço da unidade antes de se deslocar.</p>
+            </div>
+        </section>
+
+        <section id="painel-entrega" class="painel">
+            <h2>Confirme o endereço de entrega</h2>
+            <div class="cartao">
+                <p class="descricao">Informe quem receberá o pedido e confira todos os dados do endereço.</p>
+
+                <form id="form-endereco">
+                    <label for="nome">Nome de quem receberá o pedido *</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name" required>
+
+                    <label for="telefone">Telefone para contato *</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(31) 99999-9999" autocomplete="tel" required>
+
+                    <label for="cep">CEP *</label>
+                    <input type="text" id="cep" name="cep" placeholder="00000-000" autocomplete="postal-code" required>
+
+                    <label for="rua">Rua ou avenida *</label>
+                    <input type="text" id="rua" name="rua" placeholder="Nome da rua ou avenida" autocomplete="address-line1" required>
+
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="numero">Número *</label>
+                            <input type="text" id="numero" name="numero" placeholder="Número" required>
+                        </div>
+                        <div class="campo">
+                            <label for="bairro">Bairro *</label>
+                            <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+                        </div>
+                    </div>
+
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento" name="complemento" placeholder="Apartamento, bloco, casa...">
+
+                    <label for="cidade">Cidade *</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" autocomplete="address-level2" required>
+
+                    <label for="estado">Estado *</label>
+                    <input type="text" id="estado" name="estado" placeholder="Ex.: MG" maxlength="2" autocomplete="address-level1" required>
+
+                    <label for="referencia">Ponto de referência</label>
+                    <textarea id="referencia" name="referencia" placeholder="Ex.: próximo à praça, portão azul..."></textarea>
+
+                    <p class="observacao">* Campos obrigatórios. Confira os dados antes de confirmar.</p>
+                    <button type="submit">CONFIRMAR ENDEREÇO</button>
+                    <p id="mensagem" class="mensagem" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h4>CONTATO:</h4>
+        (55) 31 99999-9999<br>
+        fogo.braza@gmail.com<br>
+        © Sabor e Braza 2026
+    </footer>
+
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+        const tipo = parametros.get("tipo");
+
+        if (tipo === "retirada") {
+            document.getElementById("opcao-retirada").checked = true;
+        } else if (tipo === "entrega") {
+            document.getElementById("opcao-entrega").checked = true;
+        }
+
+        document.getElementById("form-endereco").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("mensagem").textContent =
+                "Endereço conferido! Para salvar os dados e vinculá-los ao pedido, será necessário integrar esta página ao PHP e ao banco de dados.";
+        });
+    </script>
+
+</body>
+</html>
