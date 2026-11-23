@@ -1,13 +1,16 @@
+/* Aplica configurações básicas a todos os elementos, removendo margens e ajustando os tamanhos. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Define o comportamento geral do documento. */
 html{
     scroll-behavior: smooth;
 }
 
+/* Define fonte, cores e fundo geral da página. */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -16,6 +19,7 @@ body {
 
 
 
+/* Estiliza o cabeçalho da página. */
 header {
     background-color: #222;
     color: white;
@@ -29,21 +33,25 @@ header {
 
 
 
+/* Estiliza o cabeçalho da página. */
 header h1 {
     font-size: 35px;
 }
 
+/* Estiliza o cabeçalho da página. */
 header p {
     margin-top: 10px;
 }
 
 
+/* Estiliza a barra de navegação. */
 nav {
     background-color: #b22222;
     padding: 15px;
     text-align: center;
 }
 
+/* Estiliza a barra de navegação. */
 nav a {
     color: white;
     text-decoration: none;
@@ -51,11 +59,13 @@ nav a {
     font-weight: bold;
 }
 
+/* Estiliza a barra de navegação. */
 nav a:hover {
     text-decoration: underline;
 }
 
 
+/* Controla a largura e o alinhamento da área principal. */
 main {
     width: 90%;
     max-width: 1100px;
@@ -63,6 +73,7 @@ main {
 }
 
 
+/* Estiliza a área de apresentação ou boas-vindas. */
 .inicio {
     background-color: white;
     margin: 30px 0;
@@ -71,16 +82,19 @@ main {
     border-radius: 10px;
 }
 
+/* Define o espaçamento entre as seções. */
 section {
     margin-bottom: 50px;
 }
 
+/* Define o espaçamento entre as seções. */
 section h2 {
     text-align: center;
     margin-bottom: 25px;
     color: #b22222;
 }
 
+/* Organiza os cartões de produtos e permite que mudem de linha. */
 .produtos {
     display: flex;
     justify-content: center;
@@ -88,6 +102,7 @@ section h2 {
     flex-wrap: wrap;
 }
 
+/* Define o formato visual dos cartões de produto ou formulário. */
 .produto {
     background-color: white;
     width: 230px;
@@ -97,27 +112,32 @@ section h2 {
     box-shadow: 0 2px 8px #ccc;
 }
 
+/* Define tamanho e ajuste das imagens dos produtos. */
 .produto img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
 
+/* Ajusta o espaçamento dos títulos dos produtos. */
 .produto h3 {
     margin: 12px 0;
 }
 
+/* Define tamanho e espaçamento das descrições. */
 .produto p {
     font-size: 14px;
     margin-bottom: 12px;
 }
 
+/* Destaca preços ou informações importantes. */
 .produto strong {
     display: block;
     font-size: 20px;
     margin-bottom: 15px;
 }
 
+/* Define a aparência dos botões. */
 button {
     background-color: #b22222;
     color: white;
@@ -127,10 +147,12 @@ button {
     cursor: pointer;
 }
 
+/* Muda a aparência do botão ao passar o mouse. */
 button:hover {
     background-color: #8b0000;
 }
 
+/* Estiliza o rodapé da página. */
 footer {
     background-color: #222;
     color: white;
@@ -139,6 +161,7 @@ footer {
     margin-top: 30px;
 }
 
+/* Define as regras visuais do seletor a. */
 a{
     color: white;
 }
