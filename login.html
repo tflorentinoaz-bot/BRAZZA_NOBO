@@ -1,41 +1,64 @@
+<!-- Define que o documento utiliza HTML5. -->
 <!DOCTYPE html>
+<!-- Elemento raiz da página; informa o idioma do conteúdo. -->
 <html lang="pt-BR">
 
+<!-- Início das configurações e informações da página. -->
 <head>
+    <!-- Configura informações do documento, como caracteres e adaptação para telas. -->
     <meta charset="UTF-8">
+    <!-- Configura informações do documento, como caracteres e adaptação para telas. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título exibido na aba do navegador. -->
     <title>Login - Sabor e Braza</title>
+    <!-- Conecta esta página ao arquivo CSS responsável pela aparência. -->
     <link rel="stylesheet" href="CSS_BRAZZA/login.css">
 </head>
 
+<!-- Início do conteúdo que será exibido na página. -->
 <body>
 
+    <!-- Início das configurações e informações da página. -->
     <header>
+        <!-- Título principal da página. -->
         <h1>Sabor e Braza</h1>
+        <!-- Parágrafo com informações ou descrição. -->
         <p>TUDO PARA VOCÊ!!!</p>
     </header>
 
+    <!-- Menu de navegação com links para outras páginas ou seções. -->
     <nav>
+        <!-- Link que leva a outra página ou a uma seção do site. -->
         <a href="brazza.html" style="display: inline-block; padding: 10px 18px; background-color: #7b2d16; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">INÍCIO</a>
     </nav>
 
+    <!-- Área principal que reúne o conteúdo mais importante da página. -->
     <main>
+        <!-- Bloco de conteúdo com a classe inicio. -->
         <section class="inicio">
+            <!-- Título de uma seção do conteúdo. -->
             <h2>Bem-vindo à Sabor e Braza!</h2>
+            <!-- Parágrafo com informações ou descrição. -->
             <p>Entre com seu usuário e sua senha para continuar.</p>
         </section>
 
         <!-- O login deve enviar os dados para login.php, não para braza.php. -->
         <form action="login.php" method="post">
+            <!-- Seção da página identificada por chapas. -->
             <section id="chapas">
+                <!-- Seção da página identificada por temperos. -->
                 <section id="temperos">
+                    <!-- Contêiner usado para agrupar elementos e organizar o layout. -->
                     <div class="produtos">
+                        <!-- Contêiner usado para agrupar elementos e organizar o layout. -->
                         <div class="produto">
+                            <!-- Campo usado para o visitante informar ou selecionar um dado. -->
                             <input type="text" name="usuario" placeholder="USUÁRIO" required>
 
                             <!-- O nome precisa ser senha para corresponder ao login.php. -->
                             <input type="password" name="senha" placeholder="SENHA" required>
 
+                            <!-- Botão usado para executar uma ação ou enviar o formulário. -->
                             <button type="submit">ENTRAR</button>
                         </div>
                     </div>
@@ -43,10 +66,12 @@
             </section>
         </form>
 
+        <!-- Parágrafo com informações ou descrição. -->
         <p>Não tem cadastro? <a href="cadastrar.html">Cadastre-se aqui</a>.</p>
         <br><br><br><br><br><br><br>
     </main>
 
+    <!-- Rodapé com informações de contato e identificação da loja. -->
     <footer>
         <h4>CONTATO:</h4><br>
         (55) 31 99999-9999<br>
