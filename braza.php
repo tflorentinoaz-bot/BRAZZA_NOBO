@@ -27,6 +27,7 @@ mysqli_set_charset($conexao, "utf8mb4");
 $nome = trim($_POST["nome"] ?? "");
 // Recebe os dados enviados pelo formulário.
 $usuario = trim($_POST["usuario"] ?? "");
+// Recebe e prepara informações enviadas pelo formulário.
 $email = trim($_POST["email"] ?? "");
 $cpf_cnpj = trim($_POST["cpf_cnpj"] ?? "");
 $telefone = trim($_POST["telefone"] ?? "");
@@ -34,6 +35,7 @@ $endereco = trim($_POST["endereco"] ?? "");
 // Recebe os dados enviados pelo formulário.
 $senha = $_POST["senha"] ?? "";
 $confirmar_senha = $_POST["confirmar_senha"] ?? "";
+// Guarda a opção de concordância informada no cadastro.
 $termo_concordancia = $_POST["termo_concordancia"] ?? "";
 
 // Se a pessoa discordar, o cadastro é cancelado.
@@ -47,6 +49,7 @@ if ($termo_concordancia !== "sim") {
 
 // Confere se todos os campos foram preenchidos.
 if (
+// Recebe e prepara informações enviadas pelo formulário.
     $nome === "" || $usuario === "" || $email === "" ||
     $cpf_cnpj === "" || $telefone === "" || $endereco === "" ||
 // Recebe os dados enviados pelo formulário.
@@ -68,11 +71,13 @@ if ($senha !== $confirmar_senha) {
 
 // Verifica se o nome de usuário já está cadastrado.
 $sql_verificar = "SELECT usuario FROM fogo WHERE usuario = ?";
+// Prepara a consulta para executar comandos no banco.
 $stmt_verificar = mysqli_prepare($conexao, $sql_verificar);
 // Vincula os valores informados aos parâmetros da consulta.
 mysqli_stmt_bind_param($stmt_verificar, "s", $usuario);
 // Executa a consulta preparada no banco de dados.
 mysqli_stmt_execute($stmt_verificar);
+// Armazena o resultado retornado pela consulta ao banco.
 $resultado = mysqli_stmt_get_result($stmt_verificar);
 
 // Verifica se a condição foi atendida.
@@ -106,15 +111,21 @@ if (!$stmt) {
 
 // Vincula os valores informados aos parâmetros da consulta.
 mysqli_stmt_bind_param(
+// Prepara a consulta para executar comandos no banco.
     $stmt,
     "ssssssss",
+// Recebe e prepara informações enviadas pelo formulário.
     $nome,
+// Recebe e prepara informações enviadas pelo formulário.
     $usuario,
+// Recebe e prepara informações enviadas pelo formulário.
     $email,
     $cpf_cnpj,
     $telefone,
     $endereco,
+// Recebe e prepara informações enviadas pelo formulário.
     $senha_criptografada,
+// Guarda a opção de concordância informada no cadastro.
     $termo_concordancia
 );
 
