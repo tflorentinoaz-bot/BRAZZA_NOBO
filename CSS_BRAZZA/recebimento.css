@@ -1,15 +1,18 @@
+/* Aplica configurações básicas a todos os elementos, removendo margens e ajustando os tamanhos. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Define fonte, cores e fundo geral da página. */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffffc5;
     color: #000000;
 }
 
+/* Estiliza o cabeçalho da página. */
 header {
     background-color: #222222;
     color: #fefffe;
@@ -20,20 +23,24 @@ header {
     background-size: cover;
 }
 
+/* Estiliza o cabeçalho da página. */
 header h1 {
     font-size: 35px;
 }
 
+/* Estiliza o cabeçalho da página. */
 header p {
     margin-top: 10px;
 }
 
+/* Estiliza a barra de navegação. */
 nav {
     background-color: #b22222;
     padding: 15px;
     text-align: center;
 }
 
+/* Estiliza a barra de navegação. */
 nav a {
     color: rgba(255, 255, 255, 0.94);
     text-decoration: none;
@@ -41,10 +48,12 @@ nav a {
     font-weight: bold;
 }
 
+/* Estiliza a barra de navegação. */
 nav a:hover {
     text-decoration: underline;
 }
 
+/* Controla a largura e o alinhamento da área principal. */
 main {
     width: 90%;
     max-width: 1000px;
@@ -52,6 +61,7 @@ main {
     min-height: 550px;
 }
 
+/* Estiliza a área de apresentação ou boas-vindas. */
 .inicio {
     background-color: #e1e5df;
     margin: 30px 0;
@@ -61,17 +71,20 @@ main {
 }
 
 .inicio h2,
+/* Controla a apresentação dos painéis de informação. */
 .painel h2 {
     color: #e62a2a;
     margin-bottom: 18px;
     text-align: center;
 }
 
+/* Estiliza a área de apresentação ou boas-vindas. */
 .inicio p {
     font-size: 18px;
     line-height: 1.5;
 }
 
+/* Organiza as opções de recebimento. */
 .escolhas {
     display: flex;
     justify-content: center;
@@ -80,11 +93,13 @@ main {
     margin: 25px 0 35px;
 }
 
+/* Organiza as opções de recebimento. */
 .escolhas input {
     position: absolute;
     opacity: 0;
 }
 
+/* Estiliza cada opção de recebimento. */
 .escolha {
     display: block;
     background-color: #b22222;
@@ -96,29 +111,35 @@ main {
     text-align: center;
 }
 
+/* Estiliza cada opção de recebimento. */
 .escolha:hover {
     background-color: #891d1d;
 }
 
+/* Organiza as opções de recebimento. */
 .escolhas input:checked + .escolha {
     background-color: #222222;
     outline: 3px solid #b22222;
 }
 
+/* Organiza as opções de recebimento. */
 .escolhas input:focus-visible + .escolha {
     outline: 3px solid #222222;
 }
 
+/* Controla a apresentação dos painéis de informação. */
 .painel {
     display: none;
     margin-bottom: 45px;
 }
 
 #opcao-retirada:checked ~ #painel-retirada,
+/* Define as regras visuais do seletor #opcao-entrega:checked ~ #painel-entrega. */
 #opcao-entrega:checked ~ #painel-entrega {
     display: block;
 }
 
+/* Estiliza o cartão que contém informações ou formulário. */
 .cartao {
     background-color: #ffffff;
     max-width: 720px;
@@ -128,21 +149,25 @@ main {
     box-shadow: 0 2px 8px #343534;
 }
 
+/* Estiliza o cartão que contém informações ou formulário. */
 .cartao h3 {
     color: #b22222;
     margin: 18px 0 12px;
 }
 
 .cartao p,
+/* Estiliza o cartão que contém informações ou formulário. */
 .cartao li {
     line-height: 1.6;
     margin-bottom: 8px;
 }
 
+/* Estiliza o cartão que contém informações ou formulário. */
 .cartao ul {
     padding-left: 22px;
 }
 
+/* Define as regras visuais do seletor .aviso-loja. */
 .aviso-loja {
     background-color: #f3eeee;
     border-left: 4px solid #b22222;
@@ -150,16 +175,19 @@ main {
     margin: 20px 0;
 }
 
+/* Define as regras visuais do seletor .observacao. */
 .observacao {
     color: #8c2424;
     font-size: 14px;
     margin-top: 18px;
 }
 
+/* Define as regras visuais do seletor .descricao. */
 .descricao {
     margin-bottom: 15px;
 }
 
+/* Organiza os textos que identificam os campos. */
 form label {
     display: block;
     margin: 16px 0 7px;
@@ -167,6 +195,7 @@ form label {
 }
 
 form input,
+/* Estiliza o campo de texto maior. */
 form textarea {
     width: 100%;
     padding: 12px;
@@ -177,25 +206,30 @@ form textarea {
 }
 
 form input:focus,
+/* Estiliza o campo de texto maior. */
 form textarea:focus {
     outline: 2px solid #b22222;
     border-color: #b22222;
 }
 
+/* Estiliza o campo de texto maior. */
 form textarea {
     min-height: 90px;
     resize: vertical;
 }
 
+/* Organiza campos lado a lado. */
 .linha {
     display: flex;
     gap: 15px;
 }
 
+/* Faz o campo ocupar espaço proporcional na linha. */
 .campo {
     flex: 1;
 }
 
+/* Define as regras visuais do seletor form button. */
 form button {
     background-color: #b22222;
     color: white;
@@ -207,16 +241,19 @@ form button {
     margin-top: 20px;
 }
 
+/* Define as regras visuais do seletor form button:hover. */
 form button:hover {
     background-color: #891d1d;
 }
 
+/* Define as regras visuais do seletor .mensagem. */
 .mensagem {
     color: #237a36;
     font-weight: bold;
     margin-top: 15px;
 }
 
+/* Estiliza o rodapé da página. */
 footer {
     background-color: #222222;
     color: rgb(253, 255, 252);
@@ -224,21 +261,26 @@ footer {
     margin-top: 30px;
 }
 
+/* Aplica ajustes para telas menores, como celulares. */
 @media (max-width: 600px) {
+/* Organiza campos lado a lado. */
     .linha {
         flex-direction: column;
         gap: 0;
     }
 
+/* Estiliza a barra de navegação. */
     nav a {
         display: inline-block;
         margin: 7px;
     }
 
+/* Estiliza o cartão que contém informações ou formulário. */
     .cartao {
         padding: 20px;
     }
 
+/* Estiliza cada opção de recebimento. */
     .escolha {
         width: 100%;
     }
