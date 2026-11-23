@@ -129,3 +129,8 @@ main {
     margin: auto;
 }
 
+.inicio p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #000000;
+}
