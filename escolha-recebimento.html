@@ -115,11 +115,23 @@
         const parametros = new URLSearchParams(window.location.search);
         const tipo = parametros.get("tipo");
 
+        function mostrarPainel() {
+            document.getElementById("painel-retirada").style.display =
+                document.getElementById("opcao-retirada").checked ? "block" : "none";
+
+            document.getElementById("painel-entrega").style.display =
+                document.getElementById("opcao-entrega").checked ? "block" : "none";
+        }
+
+        document.getElementById("opcao-retirada").addEventListener("change", mostrarPainel);
+        document.getElementById("opcao-entrega").addEventListener("change", mostrarPainel);
+
         if (tipo === "retirada") {
             document.getElementById("opcao-retirada").checked = true;
         } else if (tipo === "entrega") {
             document.getElementById("opcao-entrega").checked = true;
         }
+        mostrarPainel();
 
         document.getElementById("form-endereco").addEventListener("submit", function(event) {
             event.preventDefault();
