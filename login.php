@@ -44,7 +44,9 @@ $stmt = mysqli_prepare($conexao, $sql);
 mysqli_stmt_bind_param($stmt, "s", $usuario);
 // Executa a consulta preparada no banco de dados.
 mysqli_stmt_execute($stmt);
+// Armazena o resultado retornado pela consulta ao banco.
 $resultado = mysqli_stmt_get_result($stmt);
+// Armazena o resultado retornado pela consulta ao banco.
 $dados = mysqli_fetch_assoc($resultado);
 
 // Libera a consulta preparada.
