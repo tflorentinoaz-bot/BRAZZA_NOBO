@@ -1,109 +1,179 @@
+<!-- Define que o documento utiliza HTML5. -->
 <!DOCTYPE html>
+<!-- Elemento raiz da página; informa o idioma do conteúdo. -->
 <html lang="pt-BR">
+<!-- Início das configurações e informações da página. -->
 <head>
+    <!-- Configura informações do documento, como caracteres e adaptação para telas. -->
     <meta charset="UTF-8">
+    <!-- Configura informações do documento, como caracteres e adaptação para telas. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título exibido na aba do navegador. -->
     <title>Forma de recebimento - Sabor e Braza</title>
+    <!-- Conecta esta página ao arquivo CSS responsável pela aparência. -->
     <link rel="stylesheet" href="CSS_BRAZZA/recebimento.css?v=1">
 </head>
+<!-- Início do conteúdo que será exibido na página. -->
 <body>
 
+    <!-- Início das configurações e informações da página. -->
     <header>
+        <!-- Título principal da página. -->
         <h1>Sabor e Braza</h1>
+        <!-- Parágrafo com informações ou descrição. -->
         <p>TUDO PARA VOCÊ!!!</p>
     </header>
 
+    <!-- Menu de navegação com links para outras páginas ou seções. -->
     <nav>
+        <!-- Link que leva a outra página ou a uma seção do site. -->
         <a href="brazza.html" style="display: inline-block; padding: 10px 18px; background-color: #7b2d16; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">INÍCIO</a>
+        <!-- Link que leva a outra página ou a uma seção do site. -->
         <a href="entregas.html">ENTREGAS</a>
+        <!-- Link que leva a outra página ou a uma seção do site. -->
         <a href="sobre.html">SOBRE NÓS</a>
+        <!-- Link que leva a outra página ou a uma seção do site. -->
         <a href="part2.html">CADASTRA-SE</a>
     </nav>
 
+    <!-- Área principal que reúne o conteúdo mais importante da página. -->
     <main>
+        <!-- Bloco de conteúdo com a classe inicio. -->
         <section class="inicio">
+            <!-- Título de uma seção do conteúdo. -->
             <h2>Como deseja receber seu pedido?</h2>
+            <!-- Parágrafo com informações ou descrição. -->
             <p>Escolha uma opção para visualizar as informações e confirmar seus dados.</p>
         </section>
 
+        <!-- Bloco de conteúdo com a classe escolhas. -->
         <section class="escolhas" aria-label="Forma de recebimento">
+            <!-- Campo usado para o visitante informar ou selecionar um dado. -->
             <input type="radio" name="recebimento" id="opcao-retirada" value="retirada">
+            <!-- Texto que identifica um campo do formulário. -->
             <label for="opcao-retirada" class="escolha">RETIRAR NA LOJA</label>
 
+            <!-- Campo usado para o visitante informar ou selecionar um dado. -->
             <input type="radio" name="recebimento" id="opcao-entrega" value="entrega">
+            <!-- Texto que identifica um campo do formulário. -->
             <label for="opcao-entrega" class="escolha">ENTREGA NA RESIDÊNCIA</label>
         </section>
 
+        <!-- Seção da página identificada por painel-retirada. -->
         <section id="painel-retirada" class="painel">
+            <!-- Título de uma seção do conteúdo. -->
             <h2>Retirada na loja</h2>
+            <!-- Contêiner usado para agrupar elementos e organizar o layout. -->
             <div class="cartao">
+                <!-- Título de um item ou bloco dentro da seção. -->
                 <h3>Local da loja mais próxima</h3>
+                <!-- Parágrafo com informações ou descrição. -->
                 <p>Atendemos em Minas Gerais, São Paulo e Rio de Janeiro.</p>
+                <!-- Contêiner usado para agrupar elementos e organizar o layout. -->
                 <div class="aviso-loja">
                     <strong>Endereço da unidade:</strong>
+                    <!-- Parágrafo com informações ou descrição. -->
                     <p>O endereço da loja precisa ser cadastrado pela equipe da Sabor e Braza para mostrar a unidade correta.</p>
                 </div>
 
+                <!-- Título de um item ou bloco dentro da seção. -->
                 <h3>Horário de funcionamento</h3>
+                <!-- Lista de informações relacionadas. -->
                 <ul>
+                    <!-- Item individual da lista. -->
                     <li>Segunda a sexta-feira: 08h às 18h</li>
+                    <!-- Item individual da lista. -->
                     <li>Sábado: 08h às 14h</li>
+                    <!-- Item individual da lista. -->
                     <li>Domingo e feriados: fechado</li>
                 </ul>
 
+                <!-- Parágrafo com informações ou descrição. -->
                 <p class="observacao">Confirme a disponibilidade do produto e o endereço da unidade antes de se deslocar.</p>
             </div>
         </section>
 
+        <!-- Seção da página identificada por painel-entrega. -->
         <section id="painel-entrega" class="painel">
+            <!-- Título de uma seção do conteúdo. -->
             <h2>Confirme o endereço de entrega</h2>
+            <!-- Contêiner usado para agrupar elementos e organizar o layout. -->
             <div class="cartao">
+                <!-- Parágrafo com informações ou descrição. -->
                 <p class="descricao">Informe quem receberá o pedido e confira todos os dados do endereço.</p>
 
+                <!-- Formulário que reúne os campos e envia os dados para processamento. -->
                 <form id="form-endereco">
+                    <!-- Texto que identifica um campo do formulário. -->
                     <label for="nome">Nome de quem receberá o pedido *</label>
+                    <!-- Campo usado para o visitante informar ou selecionar um dado. -->
                     <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name" required>
 
+                    <!-- Texto que identifica um campo do formulário. -->
                     <label for="telefone">Telefone para contato *</label>
+                    <!-- Campo usado para o visitante informar ou selecionar um dado. -->
                     <input type="tel" id="telefone" name="telefone" placeholder="(31) 99999-9999" autocomplete="tel" required>
 
+                    <!-- Texto que identifica um campo do formulário. -->
                     <label for="cep">CEP *</label>
+                    <!-- Campo usado para o visitante informar ou selecionar um dado. -->
                     <input type="text" id="cep" name="cep" placeholder="00000-000" autocomplete="postal-code" required>
 
+                    <!-- Texto que identifica um campo do formulário. -->
                     <label for="rua">Rua ou avenida *</label>
+                    <!-- Campo usado para o visitante informar ou selecionar um dado. -->
                     <input type="text" id="rua" name="rua" placeholder="Nome da rua ou avenida" autocomplete="address-line1" required>
 
+                    <!-- Contêiner usado para agrupar elementos e organizar o layout. -->
                     <div class="linha">
+                        <!-- Contêiner usado para agrupar elementos e organizar o layout. -->
                         <div class="campo">
+                            <!-- Texto que identifica um campo do formulário. -->
                             <label for="numero">Número *</label>
+                            <!-- Campo usado para o visitante informar ou selecionar um dado. -->
                             <input type="text" id="numero" name="numero" placeholder="Número" required>
                         </div>
+                        <!-- Contêiner usado para agrupar elementos e organizar o layout. -->
                         <div class="campo">
+                            <!-- Texto que identifica um campo do formulário. -->
                             <label for="bairro">Bairro *</label>
+                            <!-- Campo usado para o visitante informar ou selecionar um dado. -->
                             <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
                         </div>
                     </div>
 
+                    <!-- Texto que identifica um campo do formulário. -->
                     <label for="complemento">Complemento</label>
+                    <!-- Campo usado para o visitante informar ou selecionar um dado. -->
                     <input type="text" id="complemento" name="complemento" placeholder="Apartamento, bloco, casa...">
 
+                    <!-- Texto que identifica um campo do formulário. -->
                     <label for="cidade">Cidade *</label>
+                    <!-- Campo usado para o visitante informar ou selecionar um dado. -->
                     <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" autocomplete="address-level2" required>
 
+                    <!-- Texto que identifica um campo do formulário. -->
                     <label for="estado">Estado *</label>
+                    <!-- Campo usado para o visitante informar ou selecionar um dado. -->
                     <input type="text" id="estado" name="estado" placeholder="Ex.: MG" maxlength="2" autocomplete="address-level1" required>
 
+                    <!-- Texto que identifica um campo do formulário. -->
                     <label for="referencia">Ponto de referência</label>
+                    <!-- Campo de texto maior para informações adicionais. -->
                     <textarea id="referencia" name="referencia" placeholder="Ex.: próximo à praça, portão azul..."></textarea>
 
+                    <!-- Parágrafo com informações ou descrição. -->
                     <p class="observacao">* Campos obrigatórios. Confira os dados antes de confirmar.</p>
+                    <!-- Botão usado para executar uma ação ou enviar o formulário. -->
                     <button type="submit">CONFIRMAR ENDEREÇO</button>
+                    <!-- Parágrafo com informações ou descrição. -->
                     <p id="mensagem" class="mensagem" aria-live="polite"></p>
                 </form>
             </div>
         </section>
     </main>
 
+    <!-- Rodapé com informações de contato e identificação da loja. -->
     <footer>
         <h4>CONTATO:</h4>
         (55) 31 99999-9999<br>
@@ -111,10 +181,14 @@
         © Sabor e Braza 2026
     </footer>
 
+    <!-- JavaScript: controla as interações e respostas desta página. -->
     <script>
+        // Guarda valores e elementos que serão utilizados pelo script.
         const parametros = new URLSearchParams(window.location.search);
+        // Guarda valores e elementos que serão utilizados pelo script.
         const tipo = parametros.get("tipo");
 
+        // Função responsável por executar uma ação da página.
         function mostrarPainel() {
             document.getElementById("painel-retirada").style.display =
                 document.getElementById("opcao-retirada").checked ? "block" : "none";
@@ -123,17 +197,23 @@
                 document.getElementById("opcao-entrega").checked ? "block" : "none";
         }
 
+        // Escuta uma ação do usuário e executa o código correspondente.
         document.getElementById("opcao-retirada").addEventListener("change", mostrarPainel);
+        // Escuta uma ação do usuário e executa o código correspondente.
         document.getElementById("opcao-entrega").addEventListener("change", mostrarPainel);
 
+        // Verifica uma condição para decidir qual ação executar.
         if (tipo === "retirada") {
             document.getElementById("opcao-retirada").checked = true;
+        // Verifica uma condição para decidir qual ação executar.
         } else if (tipo === "entrega") {
             document.getElementById("opcao-entrega").checked = true;
         }
         mostrarPainel();
 
+        // Escuta uma ação do usuário e executa o código correspondente.
         document.getElementById("form-endereco").addEventListener("submit", function(event) {
+            // Impede o envio padrão para tratar o formulário com JavaScript.
             event.preventDefault();
             document.getElementById("mensagem").textContent =
                 "Endereço conferido! Para salvar os dados e vinculá-los ao pedido, será necessário integrar esta página ao PHP e ao banco de dados.";
