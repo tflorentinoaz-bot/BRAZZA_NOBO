@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffffc5;
+    color: #000000;
+}
+
+header {
+    background-color: #222222;
+    color: #fefffe;
+    text-align: center;
+    padding: 30px;
+    background-image: url("../imagem-chuchu/Design sem nome (1).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 35px;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+nav {
+    background-color: #b22222;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.94);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    min-height: 550px;
+}
+
+.inicio {
+    background-color: #e1e5df;
+    margin: 30px 0;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.inicio h2,
+.painel h2 {
+    color: #e62a2a;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.inicio p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.escolhas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 25px 0 35px;
+}
+
+.escolhas input {
+    position: absolute;
+    opacity: 0;
+}
+
+.escolha {
+    display: block;
+    background-color: #b22222;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.escolha:hover {
+    background-color: #891d1d;
+}
+
+.escolhas input:checked + .escolha {
+    background-color: #222222;
+    outline: 3px solid #b22222;
+}
+
+.escolhas input:focus-visible + .escolha {
+    outline: 3px solid #222222;
+}
+
+.painel {
+    display: none;
+    margin-bottom: 45px;
+}
+
+#opcao-retirada:checked ~ #painel-retirada,
+#opcao-entrega:checked ~ #painel-entrega {
+    display: block;
+}
+
+.cartao {
+    background-color: #ffffff;
+    max-width: 720px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #343534;
+}
+
+.cartao h3 {
+    color: #b22222;
+    margin: 18px 0 12px;
+}
+
+.cartao p,
+.cartao li {
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.cartao ul {
+    padding-left: 22px;
+}
+
+.aviso-loja {
+    background-color: #f3eeee;
+    border-left: 4px solid #b22222;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.observacao {
+    color: #8c2424;
+    font-size: 14px;
+    margin-top: 18px;
+}
+
+.descricao {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin: 16px 0 7px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid #b22222;
+    border-color: #b22222;
+}
+
+form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.linha {
+    display: flex;
+    gap: 15px;
+}
+
+.campo {
+    flex: 1;
+}
+
+form button {
+    background-color: #b22222;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #891d1d;
+}
+
+.mensagem {
+    color: #237a36;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+footer {
+    background-color: #222222;
+    color: rgba(21, 255, 0, 0.53);
+    padding: 25px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    .linha {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    .cartao {
+        padding: 20px;
+    }
+
+    .escolha {
+        width: 100%;
+    }
+}
