@@ -184,11 +184,14 @@
     <!-- JavaScript: controla as interações e respostas desta página. -->
     <script>
         // Guarda valores e elementos que serão utilizados pelo script.
+        // Guarda valores que serão utilizados pelo JavaScript.
         const parametros = new URLSearchParams(window.location.search);
         // Guarda valores e elementos que serão utilizados pelo script.
+        // Guarda valores que serão utilizados pelo JavaScript.
         const tipo = parametros.get("tipo");
 
         // Função responsável por executar uma ação da página.
+        // Função que executa uma tarefa da página.
         function mostrarPainel() {
             document.getElementById("painel-retirada").style.display =
                 document.getElementById("opcao-retirada").checked ? "block" : "none";
@@ -198,22 +201,28 @@
         }
 
         // Escuta uma ação do usuário e executa o código correspondente.
+        // Escuta uma ação do usuário e executa uma função.
         document.getElementById("opcao-retirada").addEventListener("change", mostrarPainel);
         // Escuta uma ação do usuário e executa o código correspondente.
+        // Escuta uma ação do usuário e executa uma função.
         document.getElementById("opcao-entrega").addEventListener("change", mostrarPainel);
 
         // Verifica uma condição para decidir qual ação executar.
+        // Verifica uma condição para escolher o que será feito.
         if (tipo === "retirada") {
             document.getElementById("opcao-retirada").checked = true;
         // Verifica uma condição para decidir qual ação executar.
+        // Verifica uma condição para escolher o que será feito.
         } else if (tipo === "entrega") {
             document.getElementById("opcao-entrega").checked = true;
         }
         mostrarPainel();
 
         // Escuta uma ação do usuário e executa o código correspondente.
+        // Escuta uma ação do usuário e executa uma função.
         document.getElementById("form-endereco").addEventListener("submit", function(event) {
             // Impede o envio padrão para tratar o formulário com JavaScript.
+            // Impede o comportamento padrão do formulário.
             event.preventDefault();
             document.getElementById("mensagem").textContent =
                 "Endereço conferido! Para salvar os dados e vinculá-los ao pedido, será necessário integrar esta página ao PHP e ao banco de dados.";
