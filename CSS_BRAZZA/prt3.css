@@ -161,7 +161,7 @@ main {
 a.botao-comprar {
     display: inline-block;
     background-color: #b22222;
-    color: white;
+    color: #0000ff;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
