@@ -67,6 +67,13 @@ function moeda($valor) {
     <title>Meu carrinho - Sabor e Braza</title>
     <link rel="stylesheet" href="CSS_BRAZZA/style.css">
     <style>
+        /* Mantém o rodapé no final da tela, mesmo com pouco conteúdo. */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
         .carrinho-conteudo {
             width: 90%;
             max-width: 1000px;
@@ -75,6 +82,7 @@ function moeda($valor) {
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 2px 8px #ccc;
+            flex: 1;
         }
         .carrinho-conteudo h2 {
             color: #b22222;
