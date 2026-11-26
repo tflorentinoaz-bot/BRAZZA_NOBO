@@ -37,7 +37,7 @@ if ($usuario === "" || $senha === "") {
 }
 
 // Procura o usuário cadastrado.
-$sql = "SELECT usuario, senha FROM fogo WHERE usuario = ?";
+$sql = "SELECT id_cliente, usuario, senha FROM fogo WHERE usuario = ?";
 // Prepara a consulta para executar os comandos com segurança.
 $stmt = mysqli_prepare($conexao, $sql);
 // Vincula os valores informados aos parâmetros da consulta.
@@ -59,6 +59,7 @@ if ($dados && password_verify($senha, $dados["senha"])) {
     session_regenerate_id(true);
 // Guarda ou limpa informações da sessão do visitante.
     $_SESSION["usuario"] = $dados["usuario"];
+    $_SESSION["id_cliente"] = (int) $dados["id_cliente"];
 
     // Após o login correto, abre a página inicial da loja.
     header("Location: brazza.html");
