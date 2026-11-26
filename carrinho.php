@@ -154,6 +154,7 @@ function moeda($valor) {
         <a href="cadastrar.html">CADASTRA-SE</a>
         <a href="login.html">LOGIN</a>
         <a href="carrinho.php">CARRINHO (<?php echo $total_itens; ?>)</a>
+        <a href="meus_pedidos.php">MEUS PEDIDOS</a>
     </nav>
 
     <main class="carrinho-conteudo">
@@ -190,7 +191,7 @@ function moeda($valor) {
                 <a href="brazza.html">CONTINUAR COMPRANDO</a>
                 <a href="finalizar_pedido.php">FINALIZAR COMPRA</a>
             </div>
-            <p class="aviso-carrinho">Nesta primeira etapa, os itens ficam guardados na sessão do navegador. A finalização e o registro do pedido no banco serão integrados nas próximas etapas.</p>
+            <p class="aviso-carrinho">Seus pedidos finalizados ficam registrados no banco de dados e podem ser consultados em Meus Pedidos.</p>
         <?php endif; ?>
     </main>
 
