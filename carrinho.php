@@ -188,6 +188,7 @@ function moeda($valor) {
             <p class="total-carrinho">Total: <?php echo moeda($total); ?></p>
             <div class="acoes-carrinho">
                 <a href="brazza.html">CONTINUAR COMPRANDO</a>
+                <a href="finalizar_pedido.php">FINALIZAR COMPRA</a>
             </div>
             <p class="aviso-carrinho">Nesta primeira etapa, os itens ficam guardados na sessão do navegador. A finalização e o registro do pedido no banco serão integrados nas próximas etapas.</p>
         <?php endif; ?>
